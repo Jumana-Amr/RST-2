@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div>
+    <h1 class="h2">Linear Function</h1>
+  </div>
+  <form action="javascript:calculateEquationLin()" onchange="javascript:updateForm()">
+    <label for="id-functions"></label>
+    <select id="id-functions">
+      <option value="slope" selected>Slope-intercept form</option>
+      <option value="standard">Standard Form</option>
+    </select>
+    <br>
+    <div id="id-inputs-slope">
+      <p><em>y = <strong>m</strong>x + <strong>b</strong></em></p>
+      <label for="id-x1">x<sub>1</sub></label>
+      <input id="id-x1" type="number" step="any">
+      <label for="id-x2">x<sub>2</sub></label>
+      <input id="id-x2" type="number" step="any">
+      <br>
+      <label for="id-y1">y<sub>1</sub></label>
+      <input id="id-y1" type="number" step="any">
+      <label for="id-y2">y<sub>2</sub></label>
+      <input id="id-y2" type="number" step="any">
+      <br>
+      <br>
+      <input type="submit" value="Calculate" id="btn">
+      <p id="id-output-slope" class="output"></p>
+      <p id="id-output-y-intercept" class="output"></p>
+      <p id="id-output-x-intercept" class="output"></p>
+    </div>
+    <div id="id-inputs-standard" hidden>
+      <p><em><strong>a</strong>x + <strong>b</strong>y = <strong>c</strong></em></p>
+      <label for="id-a">a</label>
+      <input id="id-a" type="number" step="any">
+      <label for="id-b">b</label>
+      <input id="id-b" type="number" step="any">
+      <label for="id-c">c</label>
+      <input id="id-c" type="number" step="any">
+      <br>
+      <br>
+        <input type="submit" value="Calculate">
+      <p id="id-output-slope1" class="output"></p>
+      <p id="id-output-y-intercept1" class="output"></p>
+      <p id="id-output-x-intercept1" class="output"></p>
+    </div>
+    <img class="img1" src="./Images/BG_RST.jpg">
+    <script src="script.js"></script>
+    <div id="inputContainer">
+        <p class="equ">Equation: <span id="funEquation"></span></p>
+        <input id="confirmButton" type="button" value="Draw" onclick="plot()"></input>
+      </div>
+      <div id="plotContainer">
+        <canvas id="plotCanvas" height="800" width="600"></canvas>
+      </div>
+      <script src="graph.js"></script>
+  </form>
+</body>
+</html>

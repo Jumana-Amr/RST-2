@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 class="h2">Quadratic Function</h1>
+    <form action="javascript:calculateEquationquad()" onchange="javascript:updateForm()">
+    <div id="id-inputs-quad">
+      <p><em><strong>a</strong>x<sup>2</sup> + <strong>b</strong>x + <strong> c</strong> = 0</em></p>
+      <label for="id-aq">a</label>
+      <input id="id-aq" type="number" step="any">
+      <label for="id-bq">b</label>
+      <input id="id-bq" type="number" step="any">
+      <label for="id-cq">c</label>
+      <input id="id-cq" type="number" step="any">
+      <br>
+      <br>
+      <input type="submit" value="Calculate">
+      <p id="id-output-discriminant" class="output"></p>
+      <p id="demo"></p>
+      <p id="id-output-root-1" class="output"></p>
+      <p id="id-output-root-2" class="output"></p>
+      <p id="id-output-aos" class="output"></p>
+      <p id="id-output-vertex" class="output"></p>
+    </div>
+    <script src="script.js"></script>
+    </form>
+  </body>
+</html>

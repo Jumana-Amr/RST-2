@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 class="h2">Solving Linear Systems</h1>
+    <form action="javascript:calculateEquationLin2()" onchange="javascript:updateForm()">
+    <label for="id-functions"></label>
+    <p id="id-functions"></p>
+    <div id="id-inputs-substitution">
+      <p><em>ax + by = c</em></p>
+      <p>Equation 1:</p>
+      <input id="id-xe1" step="any" type="number" style="width: 4em">
+      <label for="id-xe1">x + </label>
+       <input id="id-ye1" step="any" type="number" style="width: 4em">
+      <label for="id-ye1">y = </label>
+      <input id="id-ce1" step="any" type="number" style="width: 4em">
+      <br>
+      <p>Equation 2:</p>
+       <input id="id-xe2" step="any" type="number" style="width: 4em">
+      <label for="id-xe2">x + </label>
+       <input id="id-ye2" step="any" type="number" style="width: 4em">
+      <label for="id-ye2">y = </label>
+      <input id="id-ce2" step="any" type="number" style="width: 4em">
+      <br>
+      <br>
+      <input type="submit" value="Solve" id="btn">
+      <p id="id-output-solvex" class="output"></p>
+      <p id="id-output-solvey" class="output"></p>
+    </div>
+    </form>
+    <script src="script.js"></script>
+    <div id="inputContainer">
+        <p class="equ">Equation1: <span id="funEquation"></span></p>
+        <p class="equ">Equation2: <span id="funEquation2"></span></p>
+        <input id="confirmButton" type="button" value="Draw" onclick="plot()"></input>
+      </div>
+      <div id="plotContainer">
+        <canvas id="plotCanvas" height="500" width="700" />
+      </div>
+      <script src="graph2.js"></script>
+  </body>
+</html>
