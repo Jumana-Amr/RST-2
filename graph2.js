@@ -2,7 +2,7 @@ let canvas
 let context
 
 window.onload = function () { // eslint-disable-line no-unused-vars
-  canvas = document.getElementById('plotCanvas')
+  canvas = document.getElementById('plotcanvas')
   context = canvas.getContext('2d')
 }
 
@@ -12,8 +12,8 @@ function plot()
 	let b = yinter1 // eslint-disable-line no-unused-vars
   let a1 = slope2 // eslint-disable-line no-unused-vars
 	let b1 = yinter2 // eslint-disable-line no-unused-vars
-	document.getElementById('funEquation').innerHTML = 'y=' + a +'x+' + b
-  document.getElementById('funEquation2').innerHTML = 'y=' + a1 +'x+' + b1
+	document.getElementById('funequation').innerHTML = 'y=' + a +'x+' + b
+  document.getElementById('funequation2').innerHTML = 'y=' + a1 +'x+' + b1
 	context.clearRect(0, 0, canvas.width, canvas.height)
 	let x0 = 0.5 * canvas.width
 	let y0 = 0.5 * canvas.height

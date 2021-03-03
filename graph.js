@@ -1,6 +1,5 @@
 let canvas
 let context
-
 window.onload = function () {
   canvas = document.getElementById('plot-canvas')
   context = canvas.getContext('2d')
@@ -8,16 +7,19 @@ window.onload = function () {
 function plot () { // eslint-disable-line no-unused-vars
   let a // eslint-disable-line no-unused-vars
   let b // eslint-disable-line no-unused-vars
+  /*global slope1, slope, yinter, yinter1 */
   const functions = document.getElementById('id-functions').value
   switch (functions) {
-    case 'slope':
+    case 'slope': {
       a = slope // eslint-disable-line no-unused-vars
       b = yinter // eslint-disable-line no-unused-vars
       break
-    case 'standard':
+    }
+    case 'standard': {
       a = slope1 // eslint-disable-line no-unused-vars
       b = yinter1 // eslint-disable-line no-unused-vars
       break
+    }
   }
   document.getElementById('fun-equation').innerHTML = 'y=' + a + 'x+' + b
   context.clearRect(0, 0, canvas.width, canvas.height)
