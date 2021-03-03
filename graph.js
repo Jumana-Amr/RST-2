@@ -5,9 +5,20 @@ window.onload = function () {
   canvas = document.getElementById('plot-canvas')
   context = canvas.getContext('2d')
 }
-function plot () {// eslint-disable-line no-unused-vars
-  let a = slope
-  let b = yinter
+function plot () { // eslint-disable-line no-unused-vars
+  let a = slope1
+  let b = yinter1
+  const functions = document.getElementById('id-functions').value
+  switch (functions) {
+    case 'slope':
+      a = slope
+      b = yinter
+      break
+    case 'standard':
+      a = slope1
+      b = yinter1
+      break
+  }
   document.getElementById('fun-equation').innerHTML = 'y=' + a +'x+' + b
   context.clearRect(0, 0, canvas.width, canvas.height)
   let x0 = 0.5 * canvas.width
@@ -40,7 +51,7 @@ function plot () {// eslint-disable-line no-unused-vars
 	context.stroke()
 }
 
-function drawAxes(context, axes) {// eslint-disable-line no-unused-vars
+function drawAxes (context, axes) { // eslint-disable-line no-unused-vars
   let x0=axes.x0
   let y0=axes.y0
   let width=context.canvas.width
