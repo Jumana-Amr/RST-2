@@ -18,7 +18,7 @@ function plot () { // eslint-disable-line no-unused-vars
   const x0 = 0.5 * canvas.width
   const y0 = 0.5 * canvas.height
   let x
-	const scale = 0.2
+  const scale = 0.2
   let y
   let x1
   let y1
@@ -38,7 +38,7 @@ function plot () { // eslint-disable-line no-unused-vars
     y = (a * x + b)
     x /= scale
     y /= scale
-    if(i === xMin) {
+    if (i === xMin) {
       context.moveTo(x0 + x, y0 - y)
     } else {
       context.lineTo(x0 + x, y0 - y)
@@ -63,7 +63,7 @@ function plot () { // eslint-disable-line no-unused-vars
   context.stroke()
 }
 
-function drawAxes(context, axes) { // eslint-disable-line no-unused-vars
+function drawAxes (context, axes) { // eslint-disable-line no-unused-vars
   const x0 = axes.x0
   const y0 = axes.y0
   const width = context.canvas.width

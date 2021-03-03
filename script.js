@@ -8,7 +8,8 @@ function updateForm () { // eslint-disable-line no-unused-vars
   document.getElementById('id-output-slope1').hidden = true
   document.getElementById('id-output-y-intercept1').hidden = true
   document.getElementById('id-output-x-intercept1').hidden = true
-  context.clearRect(0, 0, canvas.width, canvas.height) /* global slope1, canvas, context, yinter1 */
+  context.clearRect(0, 0, canvas.width, canvas.height) 
+  /* global canvas, context */
   /* eslint no-case-declarations: 2 */
   switch (functions) {
     case 'slope': {
@@ -69,7 +70,7 @@ function calculateEquationLin () { // eslint-disable-line no-unused-vars
 let solvex = 0
 let solvey = 0
 function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
-  /* global slope, yinter2, slope2 */
+  /* global slope1:true, yinter2:true, yinter1:true, slope2:true */
   document.getElementById('id-output-solvex').hidden = false
   document.getElementById('id-output-solvey').hidden = false
   const xe1 = document.getElementById('id-xe1').value
@@ -85,11 +86,7 @@ function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
   slope2 = -(xe2) / ye2
   yinter2 = ce2 / ye2
   document.getElementById('id-output-solvex').innerHTML = 'x = ' + solvex
-  document.getElementById('id-output-solvey').innerHTML = 'y = ' + solvey
-  document.getElementById('id-output-slope').innerHTML = 'Slope = ' + slope1
-  document.getElementById('id-output-y-intercept').innerHTML = 'Y-intercept = ' + yinter1
-  document.getElementById('id-output-slope-2').innerHTML = 'Slope = ' + slope2
-  document.getElementById('id-output-y-intercept-2').innerHTML = 'Y-intercept = ' + yinter2
+  document.getElementById('id-output-solvey').innerHTML = 'y = ' + solvey // eslint-disable-line no-unused-vars
 }
 
 let discriminant = 0
