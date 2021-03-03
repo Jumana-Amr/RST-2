@@ -12,6 +12,32 @@
   cursor: pointer;
 }
 
+#img1 {
+  display: block;
+  background-color: grey;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-repeat: no-repeat;
+}
+
+#img1:hover {
+  box-shadow: 0 0 30px gray;
+  cursor: pointer;
+}
+
+#img2 {
+  display: block;
+  background-color: grey;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+  background-repeat: no-repeat;
+}
+
+#img2:hover {
+  box-shadow: 0 0 30px gray;
+  cursor: pointer;
+}
+
 .output {
   font-size: 110%;
   font-family: cursive;
