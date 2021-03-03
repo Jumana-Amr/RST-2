@@ -63,10 +63,6 @@ function calculateEquationLin () { // eslint-disable-line no-unused-vars
 
 let solvex = 0
 let solvey = 0
-let yinter1 = 0
-let slope1 = 0
-let yinter2 = 0
-let slope2 = 0
 function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
   document.getElementById('id-output-solvex').hidden = false
   document.getElementById('id-output-solvey').hidden = false
