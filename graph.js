@@ -1,18 +1,18 @@
 var canvas
 var context
 
-window.onload = function() {
-  canvas = document.getElementById("plotCanvas")
-  context = canvas.getContext("2d")
+window.onload = function () {
+  canvas = document.getElementById('plot-canvas')
+  context = canvas.getContext('2d')
 }
 
-function plot()
-{
-	var a = slope
+function plot ()
+{ // eslint-disable-line no-unused-vars
+  var a = slope
 	var b = yinter
 
 
-	document.getElementById("funEquation").innerHTML = "y=" + a +"x+" + b
+	document.getElementById('fun-equation').innerHTML = 'y=' + a +'x+' + b
 
 	context.clearRect(0,0, canvas.width, canvas.height)
 
@@ -32,7 +32,7 @@ function plot()
 
 	drawAxes(context,axes)
 	context.beginPath()
-	context.strokeStyle = "red"
+	context.strokeStyle = 'red'
 	context.lineWidth = 2
 	for (var i=xMin; i<xMax; i++) {
 		x=dx*i
@@ -62,18 +62,18 @@ function drawAxes(context, axes)
   var yaxis = 0
   var yaxis2 = 0
 	context.beginPath()
-	context.strokeStyle = "black"
+	context.strokeStyle = 'black'
 	context.lineWidth = 1
 	//----Y axis----
-	context.moveTo(xmin,y0)
-	context.lineTo(width,y0)
+	context.moveTo(xmin, y0)
+	context.lineTo(width, y0)
 	//----X axis-----
 	context.moveTo(x0,0)
 	context.lineTo(x0,height)
 
 
 
-	//X - signs
+	// X - signs
   for(var i=x0; i<width; i+=50)
   {
     context.strokeText (xaxis,i,height/2,20)
@@ -85,7 +85,7 @@ function drawAxes(context, axes)
     xaxis2-=10
   }
   
-  //Y - signs
+  // Y - signs
   for(var j=y0; j<height; j+=50)
   {
     context.strokeText (yaxis,(width/2),j,20)
