@@ -9,7 +9,6 @@ function updateForm () { // eslint-disable-line no-unused-vars
   document.getElementById('id-output-y-intercept1').hidden = true
   document.getElementById('id-output-x-intercept1').hidden = true
   context.clearRect(0, 0, canvas.width, canvas.height)
-  
   /* global canvas, context */
   /* eslint no-case-declarations: 2 */
   switch (functions) {
