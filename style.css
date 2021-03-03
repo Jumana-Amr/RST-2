@@ -82,3 +82,16 @@
   float: right;
   bottom: 900px;
 }
+
+.main {
+  position: fixed;
+  float: right;
+  margin-left: 800px;
+  width: 400px;
+  margin-top: -50px;
+}
+
+.imgam {
+  width: 650px;
+  margin-left: 350px;
+}
