@@ -8,7 +8,8 @@ function updateForm () { // eslint-disable-line no-unused-vars
   document.getElementById('id-output-slope1').hidden = true
   document.getElementById('id-output-y-intercept1').hidden = true
   document.getElementById('id-output-x-intercept1').hidden = true
-  context.clearRect(0, 0, canvas.width, canvas.height) 
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  
   /* global canvas, context */
   /* eslint no-case-declarations: 2 */
   switch (functions) {
@@ -70,7 +71,7 @@ function calculateEquationLin () { // eslint-disable-line no-unused-vars
 let solvex = 0
 let solvey = 0
 function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
-  /* global slope1:true, yinter2:true, yinter1:true, slope2:true */
+  /* global slope1:true, yinter2:true, yinter1:true, slope2:true */ // eslint-disable-line no-unused-vars
   document.getElementById('id-output-solvex').hidden = false
   document.getElementById('id-output-solvey').hidden = false
   const xe1 = document.getElementById('id-xe1').value
@@ -80,7 +81,7 @@ function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
   const ye2 = document.getElementById('id-ye2').value
   const ce2 = document.getElementById('id-ce2').value
   solvex = ((ce2 * ye1) - (ce1 * ye2)) / ((xe2 * ye1) - (xe2) - (xe1))
-  solvey = ( ce1 - (xe1 * solvex)) / (ye1)
+  solvey = (ce1 - (xe1 * solvex)) / (ye1)
   slope1 = -(xe1) / ye1
   yinter1 = ce1 / ye1
   slope2 = -(xe2) / ye2
