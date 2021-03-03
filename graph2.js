@@ -6,26 +6,26 @@ window.onload = function () { // eslint-disable-line no-unused-vars
   context = canvas.getContext('2d')
 }
 
-function plot()
-{ // eslint-disable-line no-unused-vars
-	let a = slope1 // eslint-disable-line no-unused-vars
-	let b = yinter1 // eslint-disable-line no-unused-vars
-  let a1 = slope2 // eslint-disable-line no-unused-vars
-	let b1 = yinter2 // eslint-disable-line no-unused-vars
-	document.getElementById('funequation').innerHTML = 'y=' + a +'x+' + b
-  document.getElementById('funequation2').innerHTML = 'y=' + a1 +'x+' + b1
-	context.clearRect(0, 0, canvas.width, canvas.height)
-	let x0 = 0.5 * canvas.width
-	let y0 = 0.5 * canvas.height
+function plot () { // eslint-disable-line no-unused-vars
+  /* global slope1, slope2, yinter1, yinter2 */
+	const a = slope1 // eslint-disable-line no-unused-vars
+  const b = yinter1 // eslint-disable-line no-unused-vars
+  const a1 = slope2 // eslint-disable-line no-unused-vars
+  const b1 = yinter2 // eslint-disable-line no-unused-vars
+  document.getElementById('funequation').innerHTML = 'y=' + a + 'x+' + b
+  document.getElementById('funequation2').innerHTML = 'y=' + a1 + 'x+' + b1
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  const x0 = 0.5 * canvas.width
+	const y0 = 0.5 * canvas.height
   let x
-	let scale = 0.2  //40px per 1 unit
+	const scale = 0.2  //40px per 1 unit
 	let y
   let x1
   let y1
-	let dx = 4
-	let xMax = Math.round((canvas.width - x0) / dx)
-	let xMin = Math.round(-x0 / dx)
-	let axes={}
+	const dx = 4
+	const xMax = Math.round((canvas.width - x0) / dx)
+	const xMin = Math.round(-x0 / dx)
+	const axes={}
 	axes.x0 = x0
 	axes.y0 = y0
 	axes.scale = scale
@@ -33,25 +33,23 @@ function plot()
 	context.beginPath()
 	context.strokeStyle = 'red'
 	context.lineWidth = 2
-	for (let i = xMin; i < xMax; i++)
-	{
-		x = dx * i
-		y = (a * x + b)
+	for (let i = xMin; i < xMax; i++) {
+    x = dx * i
+    y = (a * x + b)
 		x /= scale
 		y /= scale
 		if(i === xMin) {
 			context.moveTo(x0 + x, y0 - y)
-		} else {
-			context.lineTo(x0 + x, y0 - y)
-		}
-	}
+    } else {
+      context.lineTo(x0 + x, y0 - y)
+    }
+  }
 	context.stroke()
 	context.closePath ()
   context.beginPath()
 	context.strokeStyle = 'blue'
 	context.lineWidth = 2
-  	for (let i = xMin; i < xMax; ++i)
-	{
+  	for (let i = xMin; i < xMax; ++i) {
 		x1 = dx * i
 		y1 = (a1 * x1 + b1)
 		x1 /= scale

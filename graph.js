@@ -7,7 +7,7 @@ window.onload = function () {
 function plot () { // eslint-disable-line no-unused-vars
   let a // eslint-disable-line no-unused-vars
   let b // eslint-disable-line no-unused-vars
-  /*global slope1, slope, yinter, yinter1 */
+  /* global slope1, slope, yinter, yinter1 */
   const functions = document.getElementById('id-functions').value
   switch (functions) {
     case 'slope': {
