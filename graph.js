@@ -6,17 +6,17 @@ window.onload = function () {
   context = canvas.getContext('2d')
 }
 function plot () { // eslint-disable-line no-unused-vars
-  let a = slope1
-  let b = yinter1
+  let a // eslint-disable-line no-unused-vars
+  let b // eslint-disable-line no-unused-vars
   const functions = document.getElementById('id-functions').value
   switch (functions) {
     case 'slope':
-      a = slope
-      b = yinter
+      a = slope // eslint-disable-line no-unused-vars
+      b = yinter // eslint-disable-line no-unused-vars
       break
     case 'standard':
-      a = slope1
-      b = yinter1
+      a = slope1 // eslint-disable-line no-unused-vars
+      b = yinter1 // eslint-disable-line no-unused-vars
       break
   }
   document.getElementById('fun-equation').innerHTML = 'y=' + a + 'x+' + b
