@@ -1,4 +1,3 @@
-/* Styles for the tilt block */
 #img {
   display: block;
   background-color: grey;
@@ -60,12 +59,12 @@
 
 #fun-equation {
   font-family: monospace;
-  font-size: 140%;
+  font-size: 130%;
 }
 
 #fun-equation2 {
   font-family: monospace;
-  font-size: 140%;
+  font-size: 130%;
 }
 
 .equ {
@@ -94,4 +93,14 @@
 .imgam {
   width: 650px;
   margin-left: 350px;
+}
+
+#demo {
+  font-size: 110%;
+  font-family: cursive;
+}
+
+#demo1 {
+  font-size: 110%;
+  font-family: cursive;
 }

@@ -79,14 +79,27 @@ function calculateEquationLin2 () { // eslint-disable-line no-unused-vars
   const xe2 = document.getElementById('id-xe2').value
   const ye2 = document.getElementById('id-ye2').value
   const ce2 = document.getElementById('id-ce2').value
-  solvex = ((ce2 * ye1) - (ce1 * ye2)) / ((xe2 * ye1) - (xe2) - (xe1))
-  solvey = (ce1 - (xe1 * solvex)) / (ye1)
   slope1 = -(xe1) / ye1
   yinter1 = ce1 / ye1
   slope2 = -(xe2) / ye2
   yinter2 = ce2 / ye2
-  document.getElementById('id-output-solvex').innerHTML = 'x = ' + solvex
-  document.getElementById('id-output-solvey').innerHTML = 'y = ' + solvey // eslint-disable-line no-unused-vars
+  if (slope1 === slope2) {
+    document.getElementById('demo1').innerHTML = 'No solution (Parallel)'
+    document.getElementById('id-output-solvex').hidden = true
+    document.getElementById('id-output-solvey').hidden = true
+  } else {
+    solvex = ((ce2 * ye1) - (ce1 * ye2)) / ((xe2 * ye1) - (xe1 * ye2))
+    solvey = (ce1 - (xe1 * solvex)) / (ye1)
+    document.getElementById('demo1').innerHTML = 'One solution, intersection point coordination is'
+    document.getElementById('id-output-solvex').hidden = false
+    document.getElementById('id-output-solvey').hidden = false
+    document.getElementById('id-output-solvex').innerHTML = 'x = ' + solvex
+    document.getElementById('id-output-solvey').innerHTML = 'y = ' + solvey // eslint-disable-line no-unused-vars
+  }
+  slope1 = -(xe1) / ye1
+  yinter1 = ce1 / ye1
+  slope2 = -(xe2) / ye2
+  yinter2 = ce2 / ye2
 }
 
 let discriminant = 0
@@ -107,12 +120,12 @@ function calculateEquationquad () { // eslint-disable-line no-unused-vars
   if (discriminant === 0) {
     document.getElementById('demo').innerHTML = '1 solution'
     document.getElementById('id-output-root-2').hidden = true
-    root1 = -(bq) + (Math.sqrt(bq * bq - 4 * aq * cq)) / (2 * aq)
+    root1 = (-bq + (Math.sqrt((bq * bq) - 4 * aq * cq))) / (2 * aq)
     document.getElementById('id-output-root-1').innerHTML = 'Root 1 = ' + root1
   } else if (discriminant > 0) {
     document.getElementById('demo').innerHTML = '2 solutions'
-    root1 = -(bq) + (Math.sqrt(bq * bq - 4 * aq * cq)) / (2 * aq)
-    root2 = -(bq) - (Math.sqrt(bq * bq - 4 * aq * cq)) / (2 * aq)
+    root1 = (-bq + (Math.sqrt((bq * bq) - 4 * aq * cq))) / (2 * aq)
+    root2 = (-bq - (Math.sqrt((bq * bq) - 4 * aq * cq))) / (2 * aq)
     document.getElementById('id-output-root-1').innerHTML = 'Root 1 = ' + root1
     document.getElementById('id-output-root-2').innerHTML = 'Root 2 = ' + root2
   } else {
@@ -120,9 +133,9 @@ function calculateEquationquad () { // eslint-disable-line no-unused-vars
     document.getElementById('id-output-root-1').hidden = true
     document.getElementById('id-output-root-2').hidden = true
   }
-  aos = -(bq / 2 * aq)
-  xvertex = -(bq) / 2 * aq
-  yvertex = xvertex * xvertex + bq * (xvertex) + cq
+  aos = -bq / (2 * aq)
+  xvertex = -bq / (2 * aq)
+  yvertex = (aq * (xvertex * xvertex)) + (bq * xvertex) + parseFloat(cq)
   document.getElementById('id-output-discriminant').innerHTML = 'Discriminant = ' + discriminant
   document.getElementById('id-output-aos').innerHTML = 'Axis of Symetry = ' + aos
   document.getElementById('id-output-vertex').innerHTML = 'vertex = ( ' + xvertex + ' , ' + yvertex + ' )'

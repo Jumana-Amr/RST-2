@@ -26,7 +26,7 @@ function plot () { // eslint-disable-line no-unused-vars
   const x0 = 0.5 * canvas.width
   const y0 = 0.5 * canvas.height
   let x
-  const scale = 0.2
+  const scale = 0.2 // 0.2px for every unit
   let y
   const dx = 4
   const xMax = Math.round((canvas.width - x0) / dx)
